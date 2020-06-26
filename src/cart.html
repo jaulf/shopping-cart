@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="design.css">
+    <script src="https://kit.fontawesome.com/d3cfd5df57.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body style="margin:0">
+
+<section id="main">
+
+<!-- pop-up navbar -->
+<div id="mySidenav" class="sidenav">
+    
+    <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a>Groceries</a>
+        <a>Appliances</a>
+        <a>Fashion</a>
+        <a>Drinks</a>
+        <a>Foods</a>
+        <a>Alcohol</a>
+    
+</div>
+
+<nav id="nav-wrapper" class="nav-wrapper">
+    <div class="nav-container">
+    <div style="flex:1"><a onclick="openNav()">☰</a></div>
+    <div style="flex:8;"><a style="color:black;" href="home.html">Store</a></div>
+    <div class="cart" style="flex:1">
+        <a class="icon-class" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+        <b>4</b>
+    </div>
+    
+    </div>
+</nav>
+
+
+<section class="cart-container-section">
+    
+    
+    <div class="cart-wrapper">
+        <h1 style="font-weight:400;font-size: 24px">Shopping Cart</h1>
+        <h2 style="font-weight: lighter">You ordered :</h2>
+
+        <!-- cell head -->
+        <div class="cart-table-head">
+        
+        <div style="order: 1" class="tab-head"><p>item</p></div>
+        <div style="order: 2" class="tab-head"><p>&nbsp;</p></div>
+        <div style="order: 3" class="tab-head"><p>Price</p></div>
+        <div style="order: 4" class="tab-head">
+            <p>quantity</p>
+        </div>
+        <div style="order: 5" class="tab-head"><p>action</p></div>
+            
+        </div>
+        <!-- end of cell head -->
+                                                                                       
+        <!-- cell data -->
+        <div class="cart-table">
+            <div style="order: 1" class="tab-cell">
+                <img src="images/5.jpg" style="width:130px;height:100px">
+            </div>
+            <div style="order: 2" class="tab-cell">
+                <p>milk</p>
+            </div>
+            <div style="order: 3" class="tab-cell"><p>₦1,200</p></div>
+            <div style="order: 4" class="tab-cell">
+                <div style="display:block;">
+                <div class="quantity-wrap">
+                <button class="one"><i class="fas fa-caret-up"></i></button>
+                <div class="two">3</div>
+                <button class="three"><i class="fas fa-caret-down"></i></button>
+                </div>
+                </div>
+            </div>
+            <div style="order: 5" class="tab-cell"><a href="/">remove</a></div>
+        </div>
+        <!-- end of cell data -->
+                                                                                       
+        <!-- cell data -->
+        <div class="cart-table">
+            <div style="order: 1" class="tab-cell">
+                <img src="images/3.jpg" style="width:130px;height:100px">
+            </div>
+            <div style="order: 2" class="tab-cell">
+                <p>Grapes</p>
+            </div>
+            <div style="order: 3" class="tab-cell"><p>₦900</p></div>
+            <div style="order: 4" class="tab-cell">
+                <div style="display:block;">
+                <div class="quantity-wrap">
+                <button class="one"><i class="fas fa-caret-up"></i></button>
+                <div class="two">7</div>
+                <button class="three"><i class="fas fa-caret-down"></i></button>
+                </div>
+                </div>
+            </div>
+            <div style="order: 5" class="tab-cell"><a href="/">remove</a></div>
+        </div>
+        <!-- end of cell data -->
+        
+        <div class="checkout">
+            <p>Total : ₦900</p>
+            <button>Checkout</button>
+        </div>
+    
+    </div>
+
+</section>
+</section>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+function addToCart() {
+    document.getElementById("pop-wrap").style.display = "flex";
+}
+
+function closePopUp() {
+    document.getElementById("pop-wrap").style.display = "none";
+}
+
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("nav-wrapper").style.padding = "15px";
+  } else {
+    document.getElementById("nav-wrapper").style.padding = "10px";
+  }
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

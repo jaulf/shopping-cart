@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+<body style="margin:0">
+
+<!-- pop-up navbar -->
+<div id="mySidenav" class="sidenav">
+    
+    <a class="closebtn" onclick="closeNav()">&times;</a>
+        <a>Groceries</a>
+        <a>Appliances</a>
+        <a>Fashion</a>
+        <a>Drinks</a>
+        <a>Foods</a>
+        <a>Alcohol</a>
+    
+</div>
+
+<section id="main">
+
+<!-- main navbar -->
+<nav id="nav-wrapper" class="nav-wrapper">
+    <div class="nav-container">
+    <div style="flex:1"><a onclick="openNav()">☰</a></div>
+    <div style="flex:8;"><a>Store</a></div>
+    <div class="cart" style="flex:1">
+        <a class="icon-class" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+        <b>4</b>
+    </div>
+    
+    </div>
+</nav>
+<div id="pop-wrap" class="pop-wrap"><div class="pop-up"><p>Your item has been added to the cart</p><span onclick="closePopUp()"> x </span> </div></div>
+
+    <section class="container-section">
+        
+        <h2>Welcome to our store's homepage !</h2>
+        
+        <div class="container">
+            <div>
+                <img src='images/1.jpg' >
+                <p>Anime Collection 1</p>
+                <p>₦1,130</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            
+            <div>
+                <img src='images/2.jpg' >
+                <p>Anime Collection 2</p>
+                <p>₦1,130</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            
+            <div>
+                <img src='images/3.jpg' >
+                <p>Anime Collection 3</p>
+                <p>₦1,130</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <div>
+                <img src='images/0.jpg' >
+                <p>Anime Collection 4</p>
+                <p>₦1,130</p>
+                <button>Add to Cart</button>
+            </div>
+            
+        </div>
+        
+    </section>
+</section>
+
+<div class="pop-wrap"><div class="pop-up"><p>Your item has been added to cart !</p> <span>x</span></div></div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+function addToCart() {
+    document.getElementById("pop-wrap").style.display = "flex";
+}
+
+function closePopUp() {
+    document.getElementById("pop-wrap").style.display = "none";
+}
+
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("nav-wrapper").style.padding = "15px"; 
+  } else {
+    document.getElementById("nav-wrapper").style.padding = "10px";
+  }
+}
+
+</script>
+
+
+</body>
+</html>
